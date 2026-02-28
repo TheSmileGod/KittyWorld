@@ -1,0 +1,131 @@
+:root {
+  color-scheme: dark;
+  --bg: #0f0b1a;
+  --panel: #1b1430;
+  --accent: #bc64ff;
+  --text: #f5edff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, system-ui, -apple-system, Segoe UI, sans-serif;
+  background: radial-gradient(circle at top, #2a1547, var(--bg));
+  color: var(--text);
+}
+
+.app-shell {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 1rem;
+}
+
+.panel {
+  width: min(980px, 100%);
+  background: color-mix(in hsl, var(--panel) 90%, black);
+  border: 1px solid #3f2d5d;
+  border-radius: 18px;
+  padding: 1.25rem;
+}
+
+.subtitle {
+  color: #d8c2f6;
+}
+
+.support-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  margin: 1.25rem 0;
+}
+
+.support-card {
+  background: #251b40;
+  border-radius: 12px;
+  border: 1px dashed #7f61b0;
+  padding: 1rem;
+}
+
+.placeholder-code {
+  font-weight: 700;
+  letter-spacing: 1.6px;
+  color: #ffe08a;
+}
+
+.cta {
+  border: 0;
+  border-radius: 10px;
+  padding: 0.7rem 1.2rem;
+  font-size: 1rem;
+  cursor: pointer;
+  background: linear-gradient(90deg, #a35cff, var(--accent));
+  color: #12091f;
+  font-weight: 700;
+}
+
+.part-groups {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 0.75rem;
+}
+
+.part-block {
+  background: #241a3f;
+  border-radius: 12px;
+  border: 1px solid #503d7a;
+  padding: 0.75rem;
+}
+
+.part-block label {
+  display: block;
+  margin-bottom: 0.45rem;
+}
+
+.part-block select {
+  width: 100%;
+  padding: 0.4rem;
+  border-radius: 7px;
+  border: 1px solid #6b56a3;
+  background: #130d25;
+  color: var(--text);
+}
+
+.result,
+.visual-preview {
+  margin-top: 1rem;
+  border-top: 1px solid #4d3b74;
+  padding-top: 0.75rem;
+}
+
+.preview-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 0.8rem;
+}
+
+.preview-card {
+  background: #241a3f;
+  border: 1px solid #503d7a;
+  border-radius: 12px;
+  padding: 0.6rem;
+}
+
+.preview-card h4 {
+  margin: 0 0 0.35rem;
+  font-size: 0.9rem;
+  color: #d4bcff;
+}
+
+.preview-card svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.hidden {
+  display: none;
+}
