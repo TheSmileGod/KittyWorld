@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KittyWorld: Zombie Builder</title>
+    <link rel="stylesheet" href="./src/styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <section id="welcome-screen" class="panel">
+        <h1>KittyWorld</h1>
+        <p class="subtitle">Рогалик про сборку анимэ-зомби из частей, найденных в мире.</p>
+
+        <div class="support-grid" aria-label="Реквизиты поддержки">
+          <article class="support-card">
+            <h2>Patreon</h2>
+            <p class="placeholder-code">ХХХХ-ХХХХ-ХХХХ-ХХХХ</p>
+          </article>
+          <article class="support-card">
+            <h2>Boosty</h2>
+            <p class="placeholder-code">ХХХХ-ХХХХ-ХХХХ-ХХХХ</p>
+          </article>
+        </div>
+
+        <button id="start-builder" class="cta">Начать сборку зомби</button>
+      </section>
+
+      <section id="builder-screen" class="panel hidden" aria-live="polite">
+        <header>
+          <h2>Конструктор зомби</h2>
+          <p>Выбирайте найденные части. Всё локально, без онлайн-функций.</p>
+        </header>
+
+        <div id="part-groups" class="part-groups"></div>
+
+        <section class="result">
+          <h3>Текущая сборка</h3>
+          <ul id="selected-parts"></ul>
+          <p id="power-rating"></p>
+        </section>
+
+        <section class="visual-preview">
+          <h3>Графический предпросмотр</h3>
+          <div id="zombie-preview" class="preview-grid"></div>
+        </section>
+      </section>
+    </main>
+
+    <script type="module" src="./src/main.js"></script>
+  </body>
+</html>
